@@ -17,5 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: xcodebuild -list -project Clone-Calculator.xcodeproj -configuration Release build  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      run: xcodebuild -project Clone-Calculator.xcodeproj -scheme Clone-Calculator -archivePath Clone-Calculator.xcarchive archive  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      
   

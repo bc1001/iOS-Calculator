@@ -16,7 +16,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build
+    - name: Build  
       run: xcodebuild -project Clone-Calculator.xcodeproj -scheme Clone-Calculator -archivePath Clone-Calculator.xcarchive archive  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-      
+    - name: Pack
+      run: zip -r artifact.zip Clone-Calculator.xcarchive 
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: artifact.zip
+        retention-days: 5    
   

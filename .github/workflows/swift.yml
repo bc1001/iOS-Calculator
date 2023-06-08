@@ -17,5 +17,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: xcodebuild -list -project Clone-Calculator.xcodeproj Release
+      run: xcodebuild -list -project Clone-Calculator.xcodeproj -configuration Release build
   

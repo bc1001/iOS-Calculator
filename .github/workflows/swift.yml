@@ -17,5 +17,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: xcodebuild -list -project Clone-Calculator.xcodeproj
+      run: xcodebuild -list -project Clone-Calculator.xcodeproj -archivePath output.xcarchive archive
   
